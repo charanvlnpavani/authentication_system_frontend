@@ -10,7 +10,7 @@ const Login = () => {
         title="Login"
         subtitle="Please enter your credentials to login."
         footer={
-          <p>
+          <p className="m-auto">
             Don't have an account?{" "}
             <a
               href="/register"
@@ -26,19 +26,19 @@ const Login = () => {
             onSubmit={(e) => e.preventDefault()}
           >
             <div className="flex flex-row justify-between items-center gap-4 ">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">Email</label>
               <input
-                className="border rounded-sm"
+                className="border rounded-sm w-70 px-3"
                 type="email"
                 id="email"
                 name="email"
                 required
               />
             </div>
-            <div className="flex flex-row justify-between items-center gap-4 ">
-              <label htmlFor="password">Password:</label>
+            <div className="flex flex-row justify-between items-center gap-4">
+              <label htmlFor="password">Password</label>
               <input
-                className="border rounded-sm"
+                className="border rounded-sm w-70 px-3"
                 type="password"
                 id="password"
                 name="password"
@@ -60,7 +60,7 @@ const Login = () => {
             </AppButton>
           </form>
         }
-        className="w-[20vw] m-auto"
+        className="w-[25vw] m-auto"
       ></CardComponent>
     </div>
   );

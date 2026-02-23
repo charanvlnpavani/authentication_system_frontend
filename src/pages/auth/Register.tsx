@@ -10,7 +10,7 @@ const Register = () => {
         title="Register"
         subtitle="Please fill in the details to create an account."
         footer={
-          <p>
+          <p className="m-auto">
             Already have an account?{" "}
             <a
               href="/login"
@@ -26,9 +26,9 @@ const Register = () => {
             onSubmit={(e) => e.preventDefault()}
           >
             <div className="flex flex-row justify-between items-center gap-4 ">
-              <label htmlFor="name">Name:</label>
+              <label htmlFor="name">Name</label>
               <input
-                className="border rounded-sm"
+                className="border rounded-sm w-70 px-3"
                 type="text"
                 id="name"
                 name="name"
@@ -36,9 +36,9 @@ const Register = () => {
               />
             </div>
             <div className="flex flex-row justify-between items-center gap-4 ">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">Email</label>
               <input
-                className="border rounded-sm"
+                className="border rounded-sm w-70 px-3"
                 type="email"
                 id="email"
                 name="email"
@@ -46,9 +46,9 @@ const Register = () => {
               />
             </div>
             <div className="flex flex-row justify-between items-center gap-4 ">
-              <label htmlFor="password">Password:</label>
+              <label htmlFor="password">Password</label>
               <input
-                className="border rounded-sm"
+                className="border rounded-sm w-70 px-3"
                 type="password"
                 id="password"
                 name="password"
@@ -70,6 +70,7 @@ const Register = () => {
             </AppButton>
           </form>
         }
+        className="w-[25vw] m-auto"
       />
     </div>
   );
