@@ -6,6 +6,8 @@ import Login from "@/pages/auth/Login";
 import Register from "@/pages/auth/Register";
 import Notfound from "@/pages/Notfound";
 import { createBrowserRouter } from "react-router";
+import ProtectedRoute from "@/auth/ProtectedRoute";
+
 
 const Router = createBrowserRouter([
   {
@@ -26,19 +28,35 @@ const Router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/profile",
-    element: <Profile />,
+    element: (
+      <ProtectedRoute>
+        <Profile />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/session",
-    element: <Sessions />,
+    element: (
+      <ProtectedRoute>
+        <Sessions />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "*",
-    element: <Notfound />,
+    element: (
+      <ProtectedRoute>
+        <Notfound />
+      </ProtectedRoute>
+    ),
   },
 ]);
 export default Router;
